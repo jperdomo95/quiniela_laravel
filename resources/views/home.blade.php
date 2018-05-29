@@ -8,7 +8,24 @@
               {{ session('status') }}
           </div>
       @endif
-      
+      @if(Auth::user()->id === 1)
+        <div class="col-md-3 offset-md-1">
+            <div class="card">
+                <!--<img class="card-img-top" src="{{ asset('images/usuarios.png') }}" alt="Card image cap">-->
+                <div class="card-body text-center">
+                    <a href="/equipos" class="btn btn-primary">Administrar Equipos</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 offset-md-1">
+            <div class="card">
+                <!--<img class="card-img-top" src="{{ asset('images/usuarios.png') }}" alt="Card image cap">-->
+                <div class="card-body text-center">
+                    <a href="#" class="btn btn-primary">Administrar Partidos</a>
+                </div>
+            </div>
+        </div>
+      @else
         <div class="col-md-3 offset-md-1">
             <div class="card">
                 <!--<img class="card-img-top" src="{{ asset('images/usuarios.png') }}" alt="Card image cap">-->
@@ -26,5 +43,6 @@
             </div>
         </div>
       </div>
+    @endif
 </div>
 @endsection

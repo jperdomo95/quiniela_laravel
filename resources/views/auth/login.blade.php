@@ -15,10 +15,10 @@
                             <label for="username" class="col-md-4 control-label">Login</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="username" class="form-control" name="email" value="{{ old('username') }}" required autofocus>
+                                <input id="username" type="username" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
+                                @if ($errors->has('username'))
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                                 @endif
